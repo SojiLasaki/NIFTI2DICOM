@@ -1,0 +1,9 @@
+input_nifti_files/
+output_dicom_series/
+unused/
+
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
