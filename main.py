@@ -26,13 +26,16 @@ for f in os.listdir(input_dir):
             print(f"File not found: {gland_path}")
             print("----------------------------")
             continue
-
+        
+        # create necessary output directories
         dicom_series_folder = dicom_output_root / f / "DICOM_SERIES"
         dicom_seg_folder = dicom_output_root / f / "DICOM_SEG"
         dicom_seg_folder.mkdir(parents=True, exist_ok=True)
-
+        
         t2_img = sitk.ReadImage(str(t2_path))
         t2_img = sitk.Cast(t2_img, sitk.sitkInt16)
+
+
 
         nifti2dcm(t2_img, str(dicom_series_folder))
         print("DICOM series conversion complete.")
