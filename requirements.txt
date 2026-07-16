@@ -1,0 +1,11 @@
+torch
+torchvision
+numpy
+SimpleITK
+nibabel
+nnunetv2
+batchgenerators
+acvl-utils
+connected-components-3d
+opencv-python
+scipy

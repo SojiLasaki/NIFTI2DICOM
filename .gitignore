@@ -1,5 +1,11 @@
 input_nifti_files/
+input_dicom_files/
+imagesTr/
 output_dicom_series/
+output_nifti_files/
+nnUNet_results/
+nnunet_env/
+venv/
 unused/
 
 .idea/
@@ -7,3 +13,4 @@ unused/
 __pycache__/
 *.pyc
 .DS_Store
+checkpoint/
