@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-input_dir = "input_dicom_files/STUDY_P10101/"
+input_dir = "input_dicom_seriew/"
 
 if not os.path.exists(input_dir):
     raise FileNotFoundError(f"Input directory '{input_dir}' does not exist.")

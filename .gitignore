@@ -7,6 +7,7 @@ nnUNet_results/
 nnunet_env/
 venv/
 unused/
+cropped_nifti/
 
 .idea/
 .vscode/
@@ -14,3 +15,4 @@ __pycache__/
 *.pyc
 .DS_Store
 checkpoint/
+Prostate_cancer_lesion_detection/
