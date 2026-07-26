@@ -4,20 +4,22 @@ from crop import crop_images
 
 import torch
 
-full_size_t2w_path = "../NIFTI2DICOM/input_nifti_files/10005/10005_t2w.nii.gz"
-full_size_ADC_path = "../NIFTI2DICOM/input_nifti_files/10005/10005_adc.nii.gz"
-GLAND_MASK_PATH = "../NIFTI2DICOM/input_nifti_files/10005/10005_gland.nii.gz"
+case_id = "11278"
 
-output_dir = "cropped_nifti/imagesTr/{}".format(os.path.basename(full_size_t2w_path).split('_')[0])
+full_size_t2w_path = f"../NIFTI2DICOM/input_nifti_files/{case_id}/{case_id}_t2w.nii.gz"
+full_size_ADC_path = f"../NIFTI2DICOM/input_nifti_files/{case_id}/{case_id}_adc.nii.gz"
+GLAND_MASK_PATH = f"../NIFTI2DICOM/input_nifti_files/{case_id}/{case_id}_gland.nii.gz"
+
+output_dir = f"cropped_nifti/imagesTr/{case_id}"
 os.makedirs(output_dir, exist_ok=True)
 
 def tumor_seg():
     crop_images(full_size_t2w_path, full_size_ADC_path, GLAND_MASK_PATH, output_dir)
-    tumor_seg_output_folder = "output_nifti_files/10005"
+    tumor_seg_output_folder = f"output_nifti_files/{case_id}"
 
     input_files = [
-        "cropped_nifti/imagesTr/10005/10005_0000.nii.gz",
-        "cropped_nifti/imagesTr/10005/10005_0001.nii.gz",
+        f"cropped_nifti/imagesTr/{case_id}/{case_id}_0000.nii.gz",
+        f"cropped_nifti/imagesTr/{case_id}/{case_id}_0001.nii.gz",
     ]
 
     for input_file in input_files:
