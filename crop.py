@@ -137,3 +137,5 @@ def crop_images(t2w_path, ADC_path, GLAND_MASK_PATH, output_dir):
     image_inspect("Cropped T2W", cropped_t2w_path)
     image_inspect("Cropped ADC", cropped_adc_path) 
     image_inspect("Gland Mask", GLAND_MASK_PATH)
+
+    
